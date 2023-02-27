@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/shaka-player/3.1.0/shaka-player.compiled.js"></script>
+    <script src="myapp.js"></script>
+    <script>
+      const manifestUri = 'https://storage.googleapis.com/wvmedia/cenc/h264/llama/llama.mpd';
+      const licenseServer = 'https://proxy.uat.widevine.com/proxy?provider=widevine_test&video_id=GTS_SW_SECURE_DECODE';
+      document.addEventListener('DOMContentLoaded', initApp.bind(null, manifestUri, licenseServer, false /* is_l1 */));
+    </script>
+  </head>
+  <body>
+    <video id="video"
+           width="640"
+           controls>
+    </video>
+    <br>
+    Software decode allowed aka L3
+    <br>
+    <br>
+    <span id="output"></span>
+  </body>
+</html>

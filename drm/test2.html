@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/shaka-player/3.1.0/shaka-player.compiled.js"></script>
+    <script src="myapp.js"></script>
+    <script>
+      const manifestUri = 'https://shared-scheduler-us-west-1-crzuxcsor-cdn.sa.metacdn.com/live-ez/smil:s-crzuxcsor-2363.smil/manifest.mpd';
+      const licenseServer = 'https://widevine-dash.ezdrm.com/proxy?pX=739EDF&CustomData=ohSvLod4fOPMF0l6W9GAtygofA76EdYKNVelp2OSezMGE5EhWO9wSBDjIr7ywe3Fq0rzKZyWkVIXzjQIKjL9ibUVu25woyon7H0SmLaeN9xDV2uaDdVhTkY6ednHPE8KpzPgiPMj/IybpTBvLW6eow%3D%3D';
+      document.addEventListener('DOMContentLoaded', initApp.bind(null, manifestUri, licenseServer, false /* is_l1 */));
+    </script>
+  </head>
+  <body>
+    <video id="video"
+           width="640"
+           controls>
+    </video>
+    <br>
+    Software decode allowed aka L3
+    <br>
+    <br>
+    <span id="output"></span>
+  </body>
+</html>

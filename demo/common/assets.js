@@ -144,6 +144,9 @@ shakaAssets.Feature = {
 
   // Set if the asset has at least one image stream.
   THUMBNAILS: shakaDemo.MessageIds.THUMBNAILS,
+
+  // Set if the asset has LCEVC.
+  LCEVC: shakaDemo.MessageIds.LCEVC,
 };
 
 
@@ -1297,17 +1300,315 @@ shakaAssets.testAssets = [
       .addFeature(shakaAssets.Feature.MP4)
       .addFeature(shakaAssets.Feature.WEBM)
       .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
       .addDescription('H264 HLS stream with LCEVC enhancement')
       .markAsFeatured('Big Buck Bunny (LCEVC H264)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmux: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'Game (LCEVC H264)',
+      /* iconUri= */ 'https://storage.googleapis.com/shaka-asset-icons/big_buck_bunny.png',
+      /* manifestUri= */ 'https://dyctis843rxh5.cloudfront.net/vny72tI8aXJDcTYX/master.m3u8',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HLS)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('Game (LCEVC H264)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmux: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'StreamShark LCEVC',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ 'https://cdn-au-stage.metacdn.com/vfbctgph/7RpIZKpS/20221102051000_file_id1667365813414SES_Astra_UHD_Test_1_2160p_UHDTV_AAC_HEVC_x265_LiebeIst_mkv-XHIGH_4K-MP4.mp4',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('StreamShark (LCEVC H264)')
       .setExtraConfig({
         streaming: {
           useNativeHlsOnSafari: false,
           forceTransmuxTS: true,
         },
         lcevc: {
+          enabled: true,
           dynamicPerformanceScaling: true,
           logLevel: 0,
-          drawLogo: false,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'KJSL Reckless',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ '/players/streams/reckless_in_pyrmont.mp4',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('StreamShark (LCEVC H264)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmuxTS: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'KJSL LCEVC Reckless',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ '/players/streams/lcevc_reckless_in_pyrmont.mp4',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('StreamShark (LCEVC H264)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmuxTS: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'KJSL LCEVC SMPTE MP4',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ '/players/streams/lcevc_kevs_smpte_1920x1080.mp4',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('StreamShark (LCEVC H264)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmuxTS: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'KJSL LCEVC SMPTE HLS',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ 'https://cdn-au-stage.metacdn.com/bdhbbthud/703Pnk4D/20221110225736_file_id1668121068003kevs_smpte_1920x1080_mp4-XHIGH-HLS_LCEVC_1668121196865.m3u8',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HLS)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('StreamShark (LCEVC H264)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmuxTS: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'KJSL SMPTE (HLS)',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ 'https://cdn-au-stage.metacdn.com/bdhbbthud/7KDEVMFz/20221110233150_file_id1668123119187kevs_smpte_1920x1080_mp4-XHIGH-HLS_1668123276698.m3u8',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HLS)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('KJSL SMPTE (HLS)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmux: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'HD Live Schedule using LCEVC ABR sources (LCEVC)',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ 'https://pcna2-bnchbiwds-cdn.sa.metacdn.com/live/smil:s-vzzjqlby-450.smil/playlist.m3u8',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HLS)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('Live Schedule HD (LCEVC sources)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmux: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'HD Live Schedule 1080p source (LCEVC)',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ 'https://pcna2-bnchbiwds-cdn.sa.metacdn.com/live/smil:s-vzzjqlby-450.smil/chunklist_b4288000.m3u8',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HLS)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('Live Schedule HD (LCEVC sources)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmux: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'HD VOD 1080p ABR source (LCEVC)',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ 'https://cdn-1-stage.metacdn.net/vzzjqlby/wylz8LMO/20230224055509_file_id1677218128670SES_Astra_UHD_Test_1_2160p_UHDTV_AAC_HEVC_x265_LiebeIst_mkv-MASTER_PLAYLIST_1677219525652.m3u8',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HLS)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS VOD ENC (master manifest) with LCEVC enhancement')
+      .markAsFeatured('HD ABR VOD (LCEVC sources)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmux: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'HD VOD 1080p source (LCEVC)',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ 'https://cdn-1-stage.metacdn.net/vzzjqlby/74kAg7Wz/20230224055509_file_id1677218128670SES_Astra_UHD_Test_1_2160p_UHDTV_AAC_HEVC_x265_LiebeIst_mkv-XHIGH-HLS_LCEVC_1677219521387.m3u8',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HLS)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS VOD ENC (1080p manifest) with LCEVC enhancement')
+      .markAsFeatured('HD VOD (LCEVC source)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmux: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
+        },
+      }),
+  new ShakaDemoAssetInfo(
+      /* name= */ 'KJSL SMPTE (HLS)',
+      /* iconUri= */ 'https://streamshark.io/wp-content/uploads/2019/03/streamshark-dark-horizontal.svg',
+      /* manifestUri= */ 'https://cdn-au-stage.metacdn.com/bdhbbthud/wQM1XBT6/20221110233150_file_id1668123119187kevs_smpte_1920x1080_mp4-XHIGH-HLS_LCEVC_1668123572956.m3u8',
+      /* source= */ shakaAssets.Source.VNOVA)
+      .addFeature(shakaAssets.Feature.HLS)
+      .addFeature(shakaAssets.Feature.HIGH_DEFINITION)
+      .addFeature(shakaAssets.Feature.MP4)
+      .addFeature(shakaAssets.Feature.WEBM)
+      .addFeature(shakaAssets.Feature.OFFLINE)
+      .addFeature(shakaAssets.Feature.LCEVC)
+      .addDescription('H264 HLS stream with LCEVC enhancement')
+      .markAsFeatured('KJSL SMPTE (HLSi LCEVC)')
+      .setExtraConfig({
+        streaming: {
+          useNativeHlsOnSafari: false,
+          forceTransmux: true,
+        },
+        lcevc: {
+          enabled: true,
+          dynamicPerformanceScaling: true,
+          logLevel: 0,
+          drawLogo: true,
         },
       }),
   // }}}
